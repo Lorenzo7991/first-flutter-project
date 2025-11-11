@@ -73,9 +73,8 @@ class LoginPage extends StatelessWidget {
                         style: const TextStyle(color: Colors.white),
                         decoration: const InputDecoration(
                           labelText: 'Username',
-                          labelStyle: TextStyle(color: Color.fromARGB(255, 209, 209, 209)), 
-                          hintText: 'Enter your username',
-                          hintStyle: TextStyle(color: Color.fromARGB(255, 209, 209, 209)),
+                          labelStyle: TextStyle(color: Colors.white), 
+                          hintStyle: TextStyle(color: Colors.white),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: Color.fromARGB(255, 13, 44, 97)),
                           ),
@@ -93,9 +92,8 @@ class LoginPage extends StatelessWidget {
                         style: const TextStyle(color: Colors.white),
                         decoration: const InputDecoration(
                           labelText: 'Password',
-                          labelStyle: TextStyle(color: Color.fromARGB(255, 209, 209, 209)),
-                          hintText: 'Enter your password',
-                          hintStyle: TextStyle(color: Color.fromARGB(255, 209, 209, 209)),
+                          labelStyle: TextStyle(color: Colors.white),
+                          hintStyle: TextStyle(color: Colors.white),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: Color.fromARGB(255, 13, 44, 97)),
                           ),
