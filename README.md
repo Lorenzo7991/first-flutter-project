@@ -1,16 +1,38 @@
-# first_flutter_project
+# Flutter Test Application
 
-A new Flutter project.
+This is a **test application** created for studying and experimenting with **Flutter** and **Dart** development.  
+The project serves as a learning environment to explore Flutter widgets, layout design, and basic app architecture.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## To run the Project Locally
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
+Make sure you have the following installed:
+- [Flutter SDK](https://flutter.dev/docs/get-started/install)
+- Android Studio **or** Visual Studio Code (with Flutter & Dart extensions)
+- A connected device or emulator (Android, iOS, or web)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+To verify your setup:
+```
+flutter doctor
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Run instructions
+
+1. Clone the repository
+```
+git clone https://github.com/your-username/your-flutter-project.git
+
+cd your-flutter-project
+```
+
+2. Get dependencies
+```
+flutter pub get
+```
+
+3. Run the app
+```
+flutter run
+```
