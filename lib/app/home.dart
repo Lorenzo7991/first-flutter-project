@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
+import 'widgets/app_container.dart';
 
-
-class Home extends StatelessWidget {
-  const Home({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('My First App'),
-        foregroundColor: Colors.white,
-        backgroundColor: Colors.brown[700],
-        centerTitle: true,
+    return const AppContainer(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Benvenuto nel tuo mondo RPG!',
+            style: TextStyle(fontSize: 24),
+            textAlign: TextAlign.center,
+          ),
+        ],
       ),
-      body: const Text(
-        'Welcome to Flutter',
-         style: 
-         TextStyle(fontSize: 24)
-         ),
     );
   }
 }
