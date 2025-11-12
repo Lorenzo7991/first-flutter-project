@@ -16,10 +16,23 @@ class MyApp extends StatelessWidget {
       title: 'RPG Demo',
       theme: ThemeData(primarySwatch: Colors.brown),
       initialRoute: '/',
-      routes: {
-        '/': (context) => const LoginPage(),
-        '/register': (context) => const RegisterPage(),
-        '/home': (context) => const HomePage(),
+      onGenerateRoute: (settings) {
+        switch (settings.name) {
+          case '/':
+            return MaterialPageRoute(builder: (_) => const LoginPage());
+
+          case '/register':
+            return MaterialPageRoute(builder: (_) => const RegisterPage());
+
+          case '/home':
+            final username = settings.arguments as String? ?? 'Guest';
+            return MaterialPageRoute(
+              builder: (_) => HomePage(username: username),
+            );
+
+          default:
+            return null;
+        }
       },
     );
   }

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'widgets/app_container.dart';
 
-
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController usernameController = TextEditingController();
-    final TextEditingController passwordController = TextEditingController();
+    final usernameController = TextEditingController();
+    final passwordController = TextEditingController();
 
     return Scaffold(
       body: Stack(
@@ -43,73 +42,95 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white, 
+                      color: Colors.white,
                     ),
                   ),
                 ),
                 const SizedBox(height: 40),
-               Container(
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [Color.fromARGB(255, 155, 181, 229), Color.fromARGB(255, 13, 44, 97)],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black54,
-                      blurRadius: 10,
-                      offset: Offset(3, 3),
+
+                // Login Card
+                Container(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color.fromARGB(255, 155, 181, 229),
+                        Color.fromARGB(255, 13, 44, 97)
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
                     ),
-                  ],
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(30),
-                  child: Column(
-                    children: [
-                      TextField(
-                        controller: usernameController,
-                        style: const TextStyle(color: Colors.white),
-                        decoration: const InputDecoration(
-                          labelText: 'Username',
-                          labelStyle: TextStyle(color: Colors.white), 
-                          hintStyle: TextStyle(color: Colors.white),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Color.fromARGB(255, 13, 44, 97)),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Color.fromARGB(255, 13, 44, 97), width: 2),
-                          ),
-                          border: OutlineInputBorder(),
-                          contentPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-                        ),
-                      ),
-                      const SizedBox(height: 12),
-                      TextField(
-                        controller: passwordController,
-                        obscureText: true,
-                        style: const TextStyle(color: Colors.white),
-                        decoration: const InputDecoration(
-                          labelText: 'Password',
-                          labelStyle: TextStyle(color: Colors.white),
-                          hintStyle: TextStyle(color: Colors.white),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Color.fromARGB(255, 13, 44, 97)),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Color.fromARGB(255, 13, 44, 97), width: 2),
-                          ),
-                          border: OutlineInputBorder(),
-                          contentPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-                        ),
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black54,
+                        blurRadius: 10,
+                        offset: Offset(3, 3),
                       ),
                     ],
                   ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(30),
+                    child: Column(
+                      children: [
+                        TextField(
+                          controller: usernameController,
+                          style: const TextStyle(color: Colors.white),
+                          decoration: const InputDecoration(
+                            labelText: 'Username',
+                            labelStyle: TextStyle(color: Colors.white),
+                            hintStyle: TextStyle(color: Colors.white),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color.fromARGB(255, 13, 44, 97),
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color.fromARGB(255, 13, 44, 97),
+                                width: 2,
+                              ),
+                            ),
+                            border: OutlineInputBorder(),
+                            contentPadding: EdgeInsets.symmetric(
+                              vertical: 8,
+                              horizontal: 10,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        TextField(
+                          controller: passwordController,
+                          obscureText: true,
+                          style: const TextStyle(color: Colors.white),
+                          decoration: const InputDecoration(
+                            labelText: 'Password',
+                            labelStyle: TextStyle(color: Colors.white),
+                            hintStyle: TextStyle(color: Colors.white),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color.fromARGB(255, 13, 44, 97),
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color.fromARGB(255, 13, 44, 97),
+                                width: 2,
+                              ),
+                            ),
+                            border: OutlineInputBorder(),
+                            contentPadding: EdgeInsets.symmetric(
+                              vertical: 8,
+                              horizontal: 10,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-              ),
-              const SizedBox(height: 30),
+                const SizedBox(height: 30),
 
+                // Login Button
                 Container(
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
@@ -131,14 +152,25 @@ class LoginPage extends StatelessWidget {
                   ),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.transparent, 
-                      shadowColor: Colors.transparent,     
+                      backgroundColor: Colors.transparent,
+                      shadowColor: Colors.transparent,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 14),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 60,
+                        vertical: 14,
+                      ),
                     ),
-                    onPressed: () => Navigator.pushNamed(context, '/home'),
+                    onPressed: () {
+                      final username = usernameController.text.trim();
+                      Navigator.pushNamed(
+                        context,
+                        '/home',
+                        arguments:
+                            username.isNotEmpty ? username : 'Guest', 
+                      );
+                    },
                     child: const Text(
                       'Login',
                       style: TextStyle(
@@ -151,8 +183,10 @@ class LoginPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
+                // Register Button
                 TextButton(
-                  onPressed: () => Navigator.pushNamed(context, '/register'),
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/register'),
                   child: const Text(
                     'You don\'t have an account yet? Register!',
                     style: TextStyle(
@@ -163,11 +197,16 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
 
+                // Guest Button
                 TextButton(
-                  onPressed: () => Navigator.pushNamed(context, '/home'),
+                  onPressed: () => Navigator.pushNamed(
+                    context,
+                    '/home',
+                    arguments: 'Guest', // nome utente = Guest
+                  ),
                   child: const Text(
                     'Try it out, continue as Guest!',
-                   style: TextStyle(
+                    style: TextStyle(
                       color: Color.fromARGB(255, 0, 127, 201),
                       decoration: TextDecoration.underline,
                       decorationColor: Color.fromARGB(255, 0, 127, 201),
