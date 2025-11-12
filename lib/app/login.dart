@@ -202,7 +202,7 @@ class LoginPage extends StatelessWidget {
                   onPressed: () => Navigator.pushNamed(
                     context,
                     '/home',
-                    arguments: 'Guest', // nome utente = Guest
+                    arguments: 'Guest', 
                   ),
                   child: const Text(
                     'Try it out, continue as Guest!',
